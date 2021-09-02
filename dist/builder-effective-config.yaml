@@ -1,0 +1,22 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.electron.app
+copyright: Copyright ***
+productName: Electron
+files:
+  - filter:
+      - '!dist/**/*'
+win:
+  icon: build/icon.png
+  verifyUpdateCodeSignature: false
+  target:
+    - target: nsis
+      arch:
+        - ia32
+nsis:
+  oneClick: false
+  createDesktopShortcut: always
+  allowToChangeInstallationDirectory: true
+extends: null
+electronVersion: 2.0.18
